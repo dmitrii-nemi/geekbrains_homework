@@ -1,0 +1,82 @@
+# Задание 1
+# 1
+# def salary():  # work_time, rate_per_hour, bonus
+#     try:
+#         work_time = float(input('Введите отработанное время в часах: '))
+#         rate_per_hour = float(input('Введите ставку за 1 час: '))
+#         bonus = float(input('Введите премию: '))
+#         total_salary = work_time * rate_per_hour + bonus
+#         print(f'Заработная плата сотрудника составила {total_salary}')
+#     except ValueError:
+#         return print('Введите число')
+#
+#
+# salary()
+
+# 2
+# import sys
+# work_time, rate_per_hour, bonus = map(float, sys.argv[1:])
+# print('Заработная плата сотрудника составила {}'.format(work_time * rate_per_hour + bonus))
+
+# Задание 2
+# first_list = [50, 35, 9, 8, 54, 11, 23, 15, 1]
+# second_list = [qwe for num, qwe in enumerate(first_list) if num != 0 and first_list[num - 1] < first_list[num]]
+# print(f'Первый список {first_list}')
+# print(f'Второй список {second_list}')
+
+# Задание 3
+# print([num for num in range(20, 241) if num % 20 == 0 or num % 21 == 0])
+
+# Задание 4
+# some_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+# print([el for el in some_list if some_list.count(el) < 2])
+
+# Задание 5
+# from functools import reduce
+#
+#
+# def some_func(x1, x2):
+#     return x1 * x2
+#
+#
+# print(f'Четные значения {[el for el in range(100, 1001) if el % 2 == 0]}')
+# print(f'Результат перемножения {reduce(some_func, [el for el in range(100, 1001) if el % 2 == 0])}')
+
+# Задание 6
+# 1
+# from itertools import count
+#
+# for el in count(int(input('Введите стартовое число '))):
+#     print(el)  # внимание - беконечный цикл!
+
+# 2
+# from itertools import cycle
+#
+# my_list = [True, 'ABC', 123, None]
+# x = ''
+# for el in cycle(my_list):
+#     if x == 'Q' or x == 'q':
+#         break
+#     else:
+#         print(el)
+#         x = input('Q/q для выхода, любой символ для продолжения: ')
+
+
+# Задание 7
+# from itertools import count
+# from math import factorial
+# 
+# 
+# def fibo_gen():
+#     for el in count(1):
+#         yield factorial(el)
+# 
+# 
+# gen = fibo_gen()
+# x = 0
+# for i in gen:
+#     if x < 15:
+#         print(i)
+#         x += 1
+#     else:
+#         break
